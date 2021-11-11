@@ -1,7 +1,7 @@
 %% Particle movement area
 % Cilindrical params
-z_length = 20000;             %[cm]
-Radius = 12000;               %[cm]
+z_length = 150;             %[mm]
+Radius = 85;               %[mm]
 min_polar_angle = 0;        %[rad]
 max_polar_angle = 2*pi;     %[rad]
 %% Mesh params
@@ -26,9 +26,9 @@ emiter_radius = 10;                  %[mm]
 %[mass in g]
 H_plus_ion = struct('charge', 4.8032047126*10^(-10), 'mass', 1.6726219*10^(-24));
 % Fields creation----------------------------------------------------------
-Bz_min = 0.001;                         %[T]
-Bz_max = 0.005;                         %[T]
-E = [0, 0, 0];                         %[V/cm]
+Bz_min = 0.001;                                 %[T]
+Bz_max = 0.005;                                 %[T]
+E = [0, 0, 0];                                  %[V/cm]
 B_field = B_field_creation(meshes_1D, Bz_min, Bz_max);
 E_field = E_field_creation(meshes_1D, E);
 %% Test. Moution equation solver
